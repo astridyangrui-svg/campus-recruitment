@@ -17,7 +17,7 @@ if not APP_SECRET:
 
 TABLES = {
     'jobs': {
-        'table_id': 'tblhy4UgFFe7K7qp',
+        'table_id': 'tblQZeHbtfCsQngs',
         'fields': ['公司名称', '行业大类', '企业性质', '工作地点', '官方公告', '更新时间', 
                    '招聘岗位', '截止时间', '是否需要笔试', '投递方式', '备注/提示', 
                    '招聘对象', '批次', '工作地点文本']
