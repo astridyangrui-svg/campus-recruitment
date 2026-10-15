@@ -56,7 +56,12 @@ def get_table_records(token, table_id, page_size=200):
         if page_token:
             params['page_token'] = page_token
         response = requests.get(url, headers=headers, params=params)
-        result = response.json()
+        try:
+            result = response.json()
+        except Exception as e:
+            print(f"❌ 解析JSON失败！HTTP状态码: {response.status_code}")
+            print(f"❌ 服务器返回内容前200字符: {response.text[:200]}")
+            raise e  # 抛出真实错误，让工作流变红
         if result.get('code') != 0:
             raise Exception(f'获取记录失败: {result}')
         data = result.get('data', {})
@@ -125,7 +130,8 @@ def main():
                 json.dump(objects, f, ensure_ascii=False, indent=2)
             print(f'  已保存 {len(objects)} 条')
         except Exception as e:
-            print(f'  导出失败: {e}')
+            print(f'❌ 导出 {key} 失败: {e}')
+            raise e  # 触发异常，让 GitHub Actions 报错，方便你发现问题
     
     print('正在生成合并JS文件...')
     with open('data/all-data.js', 'w', encoding='utf-8') as f:
