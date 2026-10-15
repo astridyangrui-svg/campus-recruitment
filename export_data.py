@@ -10,7 +10,7 @@ import requests
 # 从环境变量读取敏感信息（本地运行时设置环境变量，GitHub Actions从Secrets注入）
 APP_ID = os.environ.get('LARK_APP_ID', 'cli_aa12fd541ef8dd2d')
 APP_SECRET = os.environ.get('LARK_APP_SECRET', '')
-BASE_TOKEN = os.environ.get('BASE_TOKEN', 'ElRPbCjVfaJfCQsJx8RcbvVynYb')
+BASE_TOKEN = os.environ.get('BASE_TOKEN', 'YH0xbxAvkakz0fsO9AqcsXiinZe')
 
 if not APP_SECRET:
     raise SystemExit('缺少 LARK_APP_SECRET 环境变量，请设置后再运行')
