@@ -32,9 +32,9 @@ jobs:
         run: |
           python export_data.py
 
-      - name: 提交并推送更新
-        run: |
-          git config --local user.email "github-actions[bot]@users.noreply.github.com"
-          git config --local user.name "github-actions[bot]"
-          git add data/
-          git diff --staged --quiet || (git commit -m "自动更新校招数据 $(date +'%Y-%m-%d')" && git push)
+      # - name: 提交并推送更新
+      #   run: |
+      #     git config --local user.email "github-actions[bot]@users.noreply.github.com"
+      #     git config --local user.name "github-actions[bot]"
+      #     git add data/
+      #     git diff --staged --quiet || (git commit -m "自动更新校招数据 $(date +'%Y-%m-%d')" && git push)
