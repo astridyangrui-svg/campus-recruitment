@@ -23,15 +23,15 @@ TABLES = {
                    '招聘对象', '批次', '工作地点文本']
     },
     'majors': {
-        'table_id': 'tbldviuIuB0GlZZv',
+        'table_id': 'tbldSftwxxuaBqxF',
         'fields': ['专业名称', '适合的岗位和公司', '了解']
     },
     'platforms': {
-        'table_id': 'tblXX7JUlB8BdQzl',
+        'table_id': 'tbloVPksJySdshNn',
         'fields': ['官方平台', '央企', '地方社保局', '综合平台', '其他央企']
     },
     'resources': {
-        'table_id': 'tblny6CXBwY3IkwB',
+        'table_id': 'tblvM6fdKg9ksTW5',
         'fields': ['资料名称', '详情']
     }
 }
